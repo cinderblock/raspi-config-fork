@@ -1062,7 +1062,7 @@ do_serial() {
       whiptail --yesno "Would you like the serial port hardware to be enabled?" $DEFAULTH 20 60 2
       RET=$?
     else
-      RET=$((2-$RET))
+      RET=${2:-$RET}
     fi
     if [ $RET -eq $CURRENTH ]; then
       ASK_TO_REBOOT=1
